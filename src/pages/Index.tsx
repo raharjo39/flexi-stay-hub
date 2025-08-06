@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Users, Wifi, Car, Coffee } from 'lucide-react';
 import BookingModal from '@/components/BookingModal';
+import studioImg from '@/assets/studio-apartment.jpg';
+import oneBedroomImg from '@/assets/one-bedroom-apartment.jpg';
+import twoBedroomImg from '@/assets/two-bedroom-apartment.jpg';
 
 const Index = () => {
   const [selectedApartment, setSelectedApartment] = useState(null);
@@ -17,7 +20,7 @@ const Index = () => {
       type: "Studio",
       price: 150000,
       priceType: "per 4 hours",
-      image: "/placeholder.svg",
+      image: studioImg,
       available: true,
       amenities: ["WiFi", "AC", "TV", "Kitchen", "Parking"],
       capacity: 2,
@@ -29,7 +32,7 @@ const Index = () => {
       type: "1 Bedroom",
       price: 250000,
       priceType: "per 4 hours",
-      image: "/placeholder.svg",
+      image: oneBedroomImg,
       available: true,
       amenities: ["WiFi", "AC", "TV", "Kitchen", "Parking", "Balcony"],
       capacity: 4,
@@ -41,7 +44,7 @@ const Index = () => {
       type: "2 Bedroom",
       price: 400000,
       priceType: "per 4 hours",
-      image: "/placeholder.svg",
+      image: twoBedroomImg,
       available: false,
       amenities: ["WiFi", "AC", "TV", "Kitchen", "Parking", "Balcony", "Gym Access"],
       capacity: 6,
@@ -184,6 +187,13 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-primary text-primary-foreground py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-sm opacity-80">Prepared by gip.co.id</p>
+        </div>
+      </footer>
 
       {/* Booking Modal */}
       {showBooking && selectedApartment && (
